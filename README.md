@@ -84,7 +84,7 @@ add mod5 = ISO_Level3_Shift Mode_switch
 
 ## Applying Changes
 
-Changes will automatically whenever you login.
+Changes will automatically apply whenever you login.
 
 You can also start it manually with
 ```
