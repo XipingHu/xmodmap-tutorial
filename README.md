@@ -58,9 +58,35 @@ As we have known before, the keycode of my `Control_L` is 37. We now change it t
 keycode 37 = Super_L
 ```
 
-Then put it into `~/.Xmodmap`, it will apply when X starts.
+Then put it into `~/.Xmodmap`
 
-Start it manually with
+### Resetting Modifiers
+Since the Modifiers is associated with keycodes instead of keynames, you need to reset them.
+
+Just add the following code at the end of `~/.Xmodmap`
+```
+clear shift
+clear lock
+clear control
+clear mod1
+clear mod2
+clear mod3
+clear mod4
+clear mod5
+add shift = Shift_L Shift_R
+add lock = Caps_Lock
+add control = Control_L Control_R
+add mod1 = Alt_L Alt_R
+add mod2 = Num_Lock
+add mod4 = Super_L Super_R Hyper_L
+add mod5 = ISO_Level3_Shift Mode_switch
+```
+
+## Applying Changes
+
+Changes will automatically whenever you login.
+
+You can also start it manually with
 ```
 xmodmap ~/.Xmodmap
 ```
